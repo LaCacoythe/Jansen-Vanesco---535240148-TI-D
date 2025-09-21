@@ -1,0 +1,128 @@
+<!-- Jansen Vanesco - 535240148 | TI D -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Asuransi Mobil</title>
+    <link rel="stylesheet" href="../styles/beliMobil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="nav-btn"><a href="checkout.html">Kembali</a></div>
+        </div>
+        
+        <div id="formPage" class="page active">
+            <h1>Form Asuransi Mobil</h1>
+            
+            <form id="insuranceForm">
+                <div class="form-section">
+                    <h2>Informasi Kendaraan</h2>
+                    
+                    <div class="form-group">
+                        <label for="carBrand">Merk Mobil*</label>
+                        <input type="text" id="carBrand" name="carBrand" required>
+                        <div class="error" id="carBrandError">Merk mobil harus diisi</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="carType">Jenis Mobil*</label>
+                        <input type="text" id="carType" name="carType" required>
+                        <div class="error" id="carTypeError">Jenis mobil harus diisi</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="manufactureYear">Tahun Pembuatan*</label>
+                        <input type="number" id="manufactureYear" name="manufactureYear" min="1900" max="2023" required>
+                        <div class="error" id="manufactureYearError">Tahun pembuatan harus diisi</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="carPrice">Harga Mobil (Rp)*</label>
+                        <input type="number" id="carPrice" name="carPrice" min="0" required>
+                        <div class="error" id="carPriceError">Harga mobil harus diisi</div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2>Identitas Kendaraan</h2>
+                    
+                    <div class="form-group">
+                        <label for="plateNumber">Nomor Plat Mobil*</label>
+                        <input type="text" id="plateNumber" name="plateNumber" required>
+                        <div class="error" id="plateNumberError">Nomor plat mobil harus diisi</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="engineNumber">Nomor Mesin*</label>
+                        <input type="text" id="engineNumber" name="engineNumber" required>
+                        <div class="error" id="engineNumberError">Nomor mesin harus diisi</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="chassisNumber">Nomor Rangka*</label>
+                        <input type="text" id="chassisNumber" name="chassisNumber" required>
+                        <div class="error" id="chassisNumberError">Nomor rangka harus diisi</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ownerName">Nama Pemilik*</label>
+                        <input type="text" id="ownerName" name="ownerName" required>
+                        <div class="error" id="ownerNameError">Nama pemilik harus diisi</div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2>Foto Kendaraan</h2>
+                    <p>Unggah foto dari berbagai sudut kendaraan Anda</p>
+                    
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <label for="frontPhoto">Tampak Depan</label>
+                            <input type="file" id="frontPhoto" name="frontPhoto" accept="image/*" required>
+                        </div>
+                        
+                        <div class="photo-item">
+                            <label for="rearPhoto">Tampak Belakang</label>
+                            <input type="file" id="rearPhoto" name="rearPhoto" accept="image/*" required>
+                        </div>
+                        
+                        <div class="photo-item">
+                            <label for="leftPhoto">Tampak Kiri</label>
+                            <input type="file" id="leftPhoto" name="leftPhoto" accept="image/*" required>
+                        </div>
+                        
+                        <div class="photo-item">
+                            <label for="rightPhoto">Tampak Kanan</label>
+                            <input type="file" id="rightPhoto" name="rightPhoto" accept="image/*" required>
+                        </div>
+                        
+                        <div class="photo-item">
+                            <label for="dashboardPhoto">Dashboard</label>
+                            <input type="file" id="dashboardPhoto" name="dashboardPhoto" accept="image/*" required>
+                        </div>
+                        
+                        <div class="photo-item">
+                            <label for="enginePhoto">Mesin</label>
+                            <input type="file" id="enginePhoto" name="enginePhoto" accept="image/*" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="calculateBtn" class="btn btn-calculate">Hitung Premi</button>
+            
+                <div id="premiResult" class="premi-result">
+                    <h3>Perkiraan Premi Asuransi Kesehatan Tahunan</h3>
+                    <div id="premiAmount" class="premi-amount">Rp 0</div>
+                    <div id="premiDetails" class="premi-details"></div>
+                </div>
+            
+                <button type="button" id="checkoutBtn" class="btn btn-checkout">Checkout</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/beliMobil.js"></script>
+</body>
+</html>

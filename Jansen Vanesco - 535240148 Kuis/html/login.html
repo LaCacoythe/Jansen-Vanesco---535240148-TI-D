@@ -1,0 +1,70 @@
+<!-- Jansen Vanesco - 535240148 | TI D -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Asuransini</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-wadah">
+        <div class="login-kartu">
+            <div class="login-kepala">
+                <h1>Masuk ke Akun Anda</h1>
+                <p>Selamat datang kembali! Silakan masuk untuk mengakses layanan kami.</p>
+            </div>
+            
+            <form id="loginForm" class="login-formulir">
+                <div class="form-grup">
+                    <label for="email">Alamat Email</label>
+                    <div class="input-dengan-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda">
+                    </div>
+                    <div class="pesan-error" id="emailError"></div>
+                </div>
+                
+                <div class="form-grup">
+                    <label for="password">Kata Sandi</label>
+                    <div class="input-dengan-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Masukkan kata sandi Anda">
+                    </div>
+                    <div class="pesan-error" id="passwordError"></div>
+                </div>
+                
+                <div class="form-opsi">
+                    <label class="ingat-saya">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Ingat saya</span>
+                    </label>
+                    <a href="#" class="lupa-password">Lupa kata sandi?</a>
+                </div>
+                
+                <button type="submit" class="tombol-login">
+                    <span>Masuk</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            
+            <div class="login-kaki">
+                <p>Belum punya akun? <a href="signup.html">Daftar di sini</a></p>
+                <p><a href="../index.html" class="kembali-beranda"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a></p>
+            </div>
+            
+            <div id="loginPesan" class="wadah-pesan"></div>
+        </div>
+        
+        <div class="login-latar">
+            <div class="latar-isi">
+                <h2>AsuransIni</h2>
+                <p>Perlindungan terbaik untuk hidup, kesehatan, dan aset berharga Anda</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

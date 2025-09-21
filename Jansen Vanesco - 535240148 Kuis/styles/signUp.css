@@ -1,0 +1,270 @@
+/* Jansen Vanesco - 535240148 | TI D */
+:root {
+    --orenDefault: #FF8C00;
+    --orenGelap: #E67E00;
+    --biruTua: #2C3E50;
+    --abu: #7F8C8D;
+    --warna-terang: #F5F7FA;
+    --warna-error: #E74C3C;
+    --warna-sukses: #27AE60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--warna-terang);
+    color: var(--biruTua);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.daftar-wadah {
+    display: flex;
+    width: 1000px;
+    max-width: 100%;
+    min-height: 650px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.daftar-kartu {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    max-height: 650px;
+}
+
+.daftar-kepala {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.daftar-kepala h1 {
+    color: var(--biruTua);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.daftar-kepala p {
+    color: var(--abu);
+    font-size: 16px;
+}
+
+.daftar-formulir {
+    width: 100%;
+}
+
+.form-grup {
+    margin-bottom: 18px;
+}
+
+.form-grup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--biruTua);
+}
+
+.input-dengan-icon {
+    position: relative;
+}
+
+.input-dengan-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--abu);
+}
+
+.input-dengan-icon input {
+    width: 100%;
+    padding: 14px 15px 14px 45px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-dengan-icon input:focus {
+    border-color: var(--orenDefault);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.pesan-error {
+    color: var(--warna-error);
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.form-opsi {
+    margin-bottom: 20px;
+}
+
+.setuju-syarat {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--abu);
+}
+
+.setuju-syarat input {
+    margin-right: 8px;
+    margin-top: 3px;
+    accent-color: var(--orenDefault);
+}
+
+.setuju-syarat a {
+    color: var(--orenDefault);
+    text-decoration: none;
+}
+
+.setuju-syarat a:hover {
+    text-decoration: underline;
+}
+
+.tombol-daftar {
+    width: 100%;
+    background-color: var(--orenDefault);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.tombol-daftar:hover {
+    background-color: var(--orenGelap);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 0, 0.3);
+}
+
+.daftar-kaki {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.daftar-kaki p {
+    color: var(--abu);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.daftar-kaki a {
+    color: var(--orenDefault);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.daftar-kaki a:hover {
+    color: var(--orenGelap);
+    text-decoration: underline;
+}
+
+.kembali-beranda {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wadah-pesan {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+}
+
+.wadah-pesan.sukses {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--warna-sukses);
+    border: 1px solid rgba(39, 174, 96, 0.2);
+    display: block;
+}
+
+.wadah-pesan.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--warna-error);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    display: block;
+}
+
+.daftar-latar {
+    flex: 1;
+    background: linear-gradient(135deg, var(--orenDefault), var(--orenGelap));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.latar-isi {
+    text-align: center;
+    z-index: 1;
+}
+
+.latar-isi h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.latar-isi p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .daftar-wadah {
+        flex-direction: column;
+        height: auto;
+        border-radius: 0;
+    }
+    
+    .daftar-kartu {
+        padding: 30px 20px;
+        order: 2;
+        max-height: none;
+    }
+    
+    .daftar-latar {
+        order: 1;
+        padding: 30px 20px;
+        min-height: 200px;
+    }
+    
+    .latar-isi h2 {
+        font-size: 24px;
+    }
+    
+    .latar-isi p {
+        font-size: 16px;
+    }
+}

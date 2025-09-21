@@ -1,0 +1,475 @@
+/* Jansen Vanesco - 535240148 | TI D */
+:root {
+    --orenDefault: #FF8C00;
+    --orenGelap: #E67E00;
+    --biruTua: #2C3E50;
+    --abu: #7F8C8D;
+    --warna-terang: #F5F7FA;
+    --warna-error: #E74C3C;
+    --warna-sukses: #27AE60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--warna-terang);
+    color: var(--biruTua);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.checkout-wadah {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tombol-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.tombol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 50px;
+}
+
+.tombol-oren {
+    background-color: var(--orenDefault);
+    color: white;
+}
+
+.tombol-oren:hover {
+    background-color: var(--orenGelap);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 0, 0.3);
+}
+
+.tombol-primer {
+    background-color: var(--biruTua);
+    color: white;
+}
+
+.tombol-primer:hover {
+    background-color: #1a2530;
+    transform: translateY(-2px);
+}
+
+.checkout-kartu-utama {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+}
+
+.checkout-kepala {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--warna-terang);
+}
+
+.checkout-kepala h1 {
+    color: var(--biruTua);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.checkout-kepala p {
+    color: var(--abu);
+    font-size: 16px;
+}
+
+.kosong-checkout {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.kosong-icon {
+    font-size: 80px;
+    color: var(--abu);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.kosong-checkout p {
+    color: var(--abu);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.checkout-isi {
+    display: none;
+}
+
+.daftar-asuransi {
+    margin-bottom: 30px;
+}
+
+.daftar-asuransi h2 {
+    color: var(--biruTua);
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--warna-terang);
+}
+
+.kartu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.kartu-asuransi {
+    background: var(--warna-terang);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 5px solid var(--orenDefault);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-asuransi:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.kartu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.jenis-asuransi {
+    background: var(--orenDefault);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nama-asuransi {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--biruTua);
+}
+
+.detail-asuransi {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--abu);
+    min-width: 120px;
+}
+
+.detail-nilai {
+    color: var(--biruTua);
+    text-align: right;
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.premi-jumlah {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--orenDefault);
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 140, 0, 0.1);
+    border-radius: 8px;
+}
+
+.tombol-aksi {
+    display: flex;
+    gap: 10px;
+}
+
+.tombol-bayar-satuan {
+    background: var(--warna-sukses);
+    color: white;
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.tombol-bayar-satuan:hover {
+    background: #219653;
+    transform: translateY(-2px);
+}
+
+.ringkasan-pembayaran {
+    background: var(--warna-terang);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.ringkasan-pembayaran h2 {
+    color: var(--biruTua);
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.ringkasan-detail {
+    margin-bottom: 25px;
+}
+
+.ringkasan-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ringkasan-item.total {
+    border-top: 2px solid var(--orenDefault);
+    border-bottom: none;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--biruTua);
+}
+
+.metode-pembayaran {
+    margin-bottom: 25px;
+}
+
+.metode-pembayaran h3 {
+    color: var(--biruTua);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.pilihan-metode {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.metode-option {
+    display: flex;
+    align-items: center;
+}
+
+.metode-option input {
+    margin-right: 15px;
+    accent-color: var(--orenDefault);
+    transform: scale(1.2);
+}
+
+.metode-option label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 15px;
+    border: 2px solid #e1e5eb;
+    border-radius: 10px;
+    flex: 1;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.metode-option input:checked + label {
+    border-color: var(--orenDefault);
+    background-color: rgba(255, 140, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(255, 140, 0, 0.1);
+}
+
+.metode-option label i {
+    color: var(--orenDefault);
+    font-size: 20px;
+    width: 24px;
+}
+
+.metode-option label span {
+    font-weight: 500;
+}
+
+.tombol-bayar {
+    width: 100%;
+    background-color: var(--warna-sukses);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.tombol-bayar:hover {
+    background-color: #219653;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(33, 150, 83, 0.3);
+}
+
+.wadah-pesan {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    font-weight: 500;
+}
+
+.wadah-pesan.sukses {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--warna-sukses);
+    border: 2px solid rgba(39, 174, 96, 0.2);
+    display: block;
+}
+
+.wadah-pesan.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--warna-error);
+    border: 2px solid rgba(231, 76, 60, 0.2);
+    display: block;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.logout-btn {
+    padding: 8px 15px;
+    background: rgba(231, 76, 60, 0.1);
+    color: #E74C3C;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logout-btn:hover {
+    background: rgba(231, 76, 60, 0.2);
+}
+
+@media (max-width: 768px) {
+    .checkout-kartu-utama {
+        padding: 20px;
+    }
+    
+    .tombol-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .kartu-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .kartu-asuransi {
+        min-height: 250px;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .detail-label {
+        min-width: auto;
+    }
+    
+    .detail-nilai {
+        text-align: left;
+    }
+    
+    .metode-option label {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-kepala h1 {
+        font-size: 24px;
+    }
+    
+    .kosong-icon {
+        font-size: 60px;
+    }
+    
+    .kartu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .premi-jumlah {
+        font-size: 20px;
+    }
+    
+    .tombol {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .tombol-bayar {
+        padding: 14px;
+    }
+}

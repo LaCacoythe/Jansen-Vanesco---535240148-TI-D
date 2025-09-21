@@ -1,0 +1,69 @@
+<!-- Jansen Vanesco - 535240148 | TI D -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histori Pembelian - Asuransini</title>
+    <link rel="stylesheet" href="../styles/histori.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-history"></i> Histori Pembelian</h1>
+            <p>Daftar semua pembelian asuransi yang telah Anda lakukan</p>
+        </header>
+
+        <div class="navigation">
+            <a href="../index.html" class="nav-btn">
+                <i class="fas fa-home"></i> Beranda
+            </a>
+            <a href="checkout.html" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i> Keranjang
+            </a>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="filterJenis">Filter Jenis:</label>
+                <select id="filterJenis">
+                    <option value="semua">Semua Jenis</option>
+                    <option value="jiwa">Asuransi Jiwa</option>
+                    <option value="kesehatan">Asuransi Kesehatan</option>
+                    <option value="mobil">Asuransi Mobil</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="filterStatus">Filter Status:</label>
+                <select id="filterStatus">
+                    <option value="semua">Semua Status</option>
+                    <option value="lunas">Lunas</option>
+                    <option value="belum">Belum Lunas</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="searchInput">Cari:</label>
+                <input type="text" id="searchInput" placeholder="Cari produk...">
+            </div>
+        </div>
+
+        <div class="histori-container">
+            <div id="emptyHistory" class="empty-history">
+                <div class="empty-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <h3>Belum ada histori pembelian</h3>
+                <p>Anda belum melakukan pembelian asuransi apapun.</p>
+                <a href="../index.html" class="btn-primary">Jelajah Produk</a>
+            </div>
+
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/historiy.js"></script>
+</body>
+</html>

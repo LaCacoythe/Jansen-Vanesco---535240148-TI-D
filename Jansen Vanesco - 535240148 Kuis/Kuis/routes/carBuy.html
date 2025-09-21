@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Enfant: Register</title>
+    <link rel="stylesheet" href="../styling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="Les Enfant"></a>
+        <nav class="navbar">
+            <a href="../index.html">Checkout</a>
+            <a href="login.html">Akun</a>
+            <a href="options.html">Asuransi</a>
+        </nav>
+    </header>
+
+    <br><br><br><br><br><br>
+
+    <div class="nicebox">
+        <form id="CarBuy" class="AuthLog" action="checkout.html">
+            <p>Merk Mobil:</p>
+            <input type="text" id="Name" name="Name">
+            <p>Jenis Mobil:</p>
+            <input type="text" id="Type" name="Type">
+            <p>Tahun Pembuatan:</p>
+            <input type="number" id="Year" name="Year">
+            <p>Harga Mobil:</p>
+            <input type="number" id="Price" name="Price">
+            <p>Total Prime:</p>
+            <div class = MoneyLayout>
+                <p>Rp</p><input type="number" id="Prime" name="Prime" readonly><p>/tahun</p>
+            </div>
+            <p>Plat Mobil:</p>
+            <input type="text" id="Plate" name="Plate">
+            <p>Nomor Mesin:</p>
+            <input type="text" id="Machine" name="Machine">
+            <p>Nomor Rangka:</p>
+            <input type="text" id="Rangka" name="Rangka">
+            <p>Nama Pemilik:</p>
+            <input type="text" id="Owner" name="Owner">
+            <p>Foto depan, belakang, kiri, kanan, dashboard, dan mesin</p>
+            <input type="file" id="not using it lol">
+            <br><br>
+            <input type="submit">
+            <br>
+            <div id="errors" class="errors"></div>
+            <br>
+        </form>
+    </div>
+    <script src="../js/CarCalculator.js"></script>
+</body>
+</html>

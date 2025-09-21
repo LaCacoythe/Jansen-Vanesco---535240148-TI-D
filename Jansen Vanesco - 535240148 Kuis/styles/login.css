@@ -1,0 +1,267 @@
+/* Jansen Vanesco - 535240148 | TI D */
+:root {
+    --orenDefault: #FF8C00;
+    --orenGelap: #E67E00;
+    --biruTua: #2C3E50;
+    --abu: #7F8C8D;
+    --warna-terang: #F5F7FA;
+    --warna-error: #E74C3C;
+    --warna-sukses: #27AE60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--warna-terang);
+    color: var(--biruTua);
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wadah {
+    display: flex;
+    width: 900px;
+    height: 650px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-kartu {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.login-kepala {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-kepala h1 {
+    color: var(--biruTua);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-kepala p {
+    color: var(--abu);
+    font-size: 16px;
+}
+
+.login-formulir {
+    width: 100%;
+}
+
+.form-grup {
+    margin-bottom: 20px;
+}
+
+.form-grup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--biruTua);
+}
+
+.input-dengan-icon {
+    position: relative;
+}
+
+.input-dengan-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--abu);
+}
+
+.input-dengan-icon input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-dengan-icon input:focus {
+    border-color: var(--orenDefault);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.pesan-error {
+    color: var(--warna-error);
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.form-opsi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ingat-saya {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ingat-saya input {
+    margin-right: 8px;
+    accent-color: var(--orenDefault);
+}
+
+.ingat-saya span {
+    color: var(--abu);
+    font-size: 14px;
+}
+
+.lupa-password {
+    color: var(--orenDefault);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.lupa-password:hover {
+    color: var(--orenGelap);
+    text-decoration: underline;
+}
+
+.tombol-login {
+    width: 100%;
+    background-color: var(--orenDefault);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.tombol-login:hover {
+    background-color: var(--orenGelap);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 0, 0.3);
+}
+
+.login-kaki {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.login-kaki p {
+    color: var(--abu);
+    font-size: 14px;
+}
+
+.login-kaki a {
+    color: var(--orenDefault);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-kaki a:hover {
+    color: var(--orenGelap);
+    text-decoration: underline;
+}
+
+.wadah-pesan {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+}
+
+.wadah-pesan.sukses {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--warna-sukses);
+    border: 1px solid rgba(39, 174, 96, 0.2);
+    display: block;
+}
+
+.wadah-pesan.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--warna-error);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    display: block;
+}
+
+.login-latar {
+    flex: 1;
+    background: linear-gradient(135deg, var(--orenDefault), var(--orenGelap));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.latar-isi {
+    text-align: center;
+    z-index: 1;
+}
+
+.latar-isi h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.latar-isi p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .login-wadah {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+    
+    .login-kartu {
+        padding: 30px 20px;
+        order: 2;
+    }
+    
+    .login-latar {
+        order: 1;
+        padding: 30px 20px;
+        min-height: 200px;
+    }
+    
+    .latar-isi h2 {
+        font-size: 24px;
+    }
+    
+    .latar-isi p {
+        font-size: 16px;
+    }
+}

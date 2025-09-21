@@ -1,0 +1,88 @@
+<!-- Jansen Vanesco - 535240148 | TI D -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Asuransi Kesehatan</title>
+    <link rel="stylesheet" href="../styles/beliKesehatan.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="nav-btn"><a href="checkout.html">Kembali</a></div>
+        </div>
+        <h1>Form Asuransi Kesehatan</h1>
+        
+        <form id="healthInsuranceForm">
+            <div class="form-section">
+                <h2>Data Pribadi</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Nama lengkap sesuai KTP*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error" id="fullNameError">Nama lengkap harus diisi</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthDate">Tanggal lahir*</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                    <div class="error" id="birthDateError">Tanggal lahir harus diisi</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="occupation">Pekerjaan*</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                    <div class="error" id="occupationError">Pekerjaan harus diisi</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Informasi Kesehatan</h2>
+                
+                <div class="form-group">
+                    <label for="smoking">Apakah Anda merokok?*</label>
+                    <select id="smoking" name="smoking" required>
+                        <option value="">Pilih opsi</option>
+                        <option value="1">Ya</option>
+                        <option value="0">Tidak</option>
+                    </select>
+                    <div class="error" id="smokingError">Pilihan harus diisi</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hypertension">Punya riwayat hipertensi?*</label>
+                    <select id="hypertension" name="hypertension" required>
+                        <option value="">Pilih opsi</option>
+                        <option value="1">Ya</option>
+                        <option value="0">Tidak</option>
+                    </select>
+                    <div class="error" id="hypertensionError">Pilihan harus diisi</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="diabetes">Punya riwayat diabetes?*</label>
+                    <select id="diabetes" name="diabetes" required>
+                        <option value="">Pilih opsi</option>
+                        <option value="1">Ya</option>
+                        <option value="0">Tidak</option>
+                    </select>
+                    <div class="error" id="diabetesError">Pilihan harus diisi</div>
+                </div>
+            </div>
+            
+            <button type="button" id="calculateBtn" class="btn btn-calculate">Hitung Premi</button>
+            
+            <div id="premiResult" class="premi-result">
+                <h3>Perkiraan Premi Asuransi Kesehatan Tahunan</h3>
+                <div id="premiAmount" class="premi-amount">Rp 0</div>
+                <div id="premiDetails" class="premi-details"></div>
+            </div>
+            
+            <button type="button" id="checkoutBtn" class="btn btn-checkout">Checkout</button>
+        </form>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/beliKesehatan.js"></script>
+</body>
+</html>
